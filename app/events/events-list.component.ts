@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core'
-import {EventService} from './shared/event.service.js'
-import {ToastrService} from '../common/toastr.service.js'
+import {Component, OnInit} from "@angular/core";
+import {ToastrService} from "../common/toastr.service.js";
+import {EventService} from "./shared/event.service.js";
 
 @Component( {
-    selector : 'events-list',
+    selector : "events-list",
     template: `
         <div>
             <h1>Upcoming Angular 2 Events</h1>
@@ -14,19 +14,20 @@ import {ToastrService} from '../common/toastr.service.js'
                 </div>
             </div>
         </div>
-    `
+    `,
 })
 
 export class EventsListComponent implements OnInit {
-  events: any[]
-  constructor(private eventService: EventService, private toastr: ToastrService){
-   
-  } 
-  ngOnInit(){
+  public events: any[];
+  constructor(private eventService: EventService, private toastr: ToastrService) {
+
+  }
+
+  public ngOnInit() {
        this.events = this.eventService.getEvents();
   }
 
-  handleThumbnailClicked(eventName){
-      this.toastr.success(eventName, 'Clicked');
+  public handleThumbnailClicked(eventName) {
+      this.toastr.success(eventName, "Clicked");
   }
 }

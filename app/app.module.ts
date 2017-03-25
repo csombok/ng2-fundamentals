@@ -15,6 +15,7 @@ import {appRoutes} from "./routes";
         BrowserModule,
         RouterModule.forRoot(appRoutes),
      ],
+    // tslint:disable-next-line:object-literal-sort-keys
     declarations: [
         EventsAppComponent,
         EventsListComponent,
@@ -25,6 +26,6 @@ import {appRoutes} from "./routes";
     bootstrap: [EventsAppComponent],
 })
 
-export class AppModule{
+export class AppModule {
 
 }

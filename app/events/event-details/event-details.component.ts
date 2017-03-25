@@ -1,24 +1,26 @@
-import {Component, OnInit} from '@angular/core'
-import {EventService} from '../shared/event.service'
-import {ActivatedRoute} from '@angular/router'
+import {Component, OnInit} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
+import {EventService} from "../shared/event.service";
 
 @Component ({
-    templateUrl: 'app/events/event-details/event-details.component.html',
+    templateUrl: "app/events/event-details/event-details.component.html",
+    // tslint:disable-next-line:object-literal-sort-keys
     styles: [
-        '.container {padding-left: 20px, padding-right :20 px}',        
-        '.event-image {height: 100px}'
-    ]
+        ".container {padding-left: 20px, padding-right :20 px}",
+        ".event-image {height: 100px}",
+    ],
 })
 
 export class EventDetailsComponent implements OnInit {
 
-    event: any
+    public event: any;
 
-    constructor(private eventService: EventService, 
-        private route: ActivatedRoute){
+    constructor(private eventService: EventService,
+                private route: ActivatedRoute) {
     }
 
-    ngOnInit(){
-         this.event = this.eventService.getEvent(+this.route.snapshot.params["id"])
+    public ngOnInit() {
+         // tslint:disable-next-line:no-string-literal
+         this.event = this.eventService.getEvent(+this.route.snapshot.params["id"]);
     }
 }
