@@ -6,14 +6,12 @@ export class EventService {
         return EVENTS;
     }
 
-    private getEvent(id) {
+    public getEvent(id) {
         return EVENTS.find((event) => event.id ===  id);
     }
 }
 
-// tslint:disable-next-line:object-literal-sort-keys
-const EVENTS =  [
-            {
+const EVENTS =  [{
             id: 1,
             name: "Angular Connect",
             // tslint:disable-next-line:object-literal-sort-keys
