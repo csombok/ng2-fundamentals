@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule} from "@angular/router";
+import { Ng2Bs3ModalModule } from "ng2-bs3-modal/ng2-bs3-modal";
 import {ToastrService} from "./common/toastr.service.js";
 import {EventsAppComponent} from "./events-app.component.js";
 import {CreateEventComponent} from "./events/create-event.component";
@@ -16,7 +17,8 @@ import {appRoutes} from "./routes";
     imports: [
         BrowserModule,
         RouterModule.forRoot(appRoutes),
-     ],
+        Ng2Bs3ModalModule,
+    ],
     // tslint:disable-next-line:object-literal-sort-keys
     declarations: [
         EventsAppComponent,
@@ -25,7 +27,7 @@ import {appRoutes} from "./routes";
         EventDetailsComponent,
         NavBarComponent,
         CreateEventComponent],
-    providers: [EventService, ToastrService],
+    providers: [EventService, ToastrService ],
     bootstrap: [EventsAppComponent],
 })
 

@@ -1,4 +1,5 @@
 import {Injectable} from "@angular/core";
+import { ModalComponent } from "ng2-bs3-modal/ng2-bs3-modal";
 
 declare let  toastr: any;
 
@@ -16,7 +17,11 @@ export class ToastrService {
         toastr.warning(message, title);
     }
 
-    public error(message: string, title: string) {
+    public error(message: string, title: string, cb: () => void ) {
         toastr.error(message, title);
+        toastr.options.onclick = () => {
+            console.log("clicked");
+            cb();
+        };
     }
 }

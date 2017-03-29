@@ -13,6 +13,7 @@
       // our app is within the app folder
       app: 'app',
       // angular bundles
+         
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -24,6 +25,7 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
       '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
+      'ng2-bs3-modal': 'npm:ng2-bs3-modal', 
       // other libraries
       'rxjs':                       'npm:rxjs',
     },
@@ -35,7 +37,10 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      'ng2-bs3-modal': {
+        defaultExtension: 'js'
+      },
     }
   });
 })(this);
