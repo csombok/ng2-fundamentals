@@ -1,5 +1,9 @@
 <div class="well hoverwell thumbnail" [routerLink]="['/events', event.id]">
-    <h2> {{event.name}} </h2>
+    <app-project-favorite [favorite]="'true'"></app-project-favorite>
+    <h2> 
+        {{event.name}}
+    </h2>
+    
     <div>Date: {{event.date}}</div>
     <div [ngSwitch]="event?.time" [ngClass]="getTimeClass()">
         Time: {{event.time}}

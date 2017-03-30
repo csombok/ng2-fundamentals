@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
+import {ProjectFavoriteComponent} from "../project-favorite/project-favorite.component";
 import {EventService} from "../shared/event.service";
 
 @Component ({

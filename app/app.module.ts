@@ -8,7 +8,9 @@ import {CreateEventComponent} from "./events/create-event.component";
 import {EventDetailsComponent} from "./events/event-details/event-details.component.js";
 import {EventThumbnailComponent} from "./events/event-thumbnail.component.js";
 import {EventsListComponent} from "./events/events-list.component.js";
+import {ProjectFavoriteComponent} from "./events/project-favorite/project-favorite.component";
 import {EventService} from "./events/shared/event.service.js";
+import {FavoriteService} from "./events/shared/favorite.service";
 import {NavBarComponent} from "./nav/nav-bar.component.js";
 
 import {appRoutes} from "./routes";
@@ -26,8 +28,9 @@ import {appRoutes} from "./routes";
         EventThumbnailComponent,
         EventDetailsComponent,
         NavBarComponent,
-        CreateEventComponent],
-    providers: [EventService, ToastrService ],
+        CreateEventComponent,
+        ProjectFavoriteComponent],
+    providers: [EventService, ToastrService, FavoriteService ],
     bootstrap: [EventsAppComponent],
 })
 
